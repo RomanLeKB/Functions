@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 #define tab "\t"
 
@@ -19,10 +19,10 @@ void main()
 	FillRand(arr, n);
 	Print(arr, n);
 	PrintReverse(arr, n);
-	cout << "ñóììà ýëåìíòîâ ìàññèâà" << Sum(arr, n) << endl;
-	cout << "ñðåäíåå àðèôìèòåñêîå ýëåìíòîâ ìàññèâà" << Avg(arr, n) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå ýëåìíòà ìàññèâà" << MinValueIn(arr, n) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå ýëåìíòà ìàññèâà" << MaxValueIn(arr, n) << endl;
+	cout << "ÑÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼Ð½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°" << Sum(arr, n) << endl;
+	cout << "ÑÑ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼Ð¸Ñ‚ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼Ð½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°" << Avg(arr, n) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼Ð½Ñ‚Ð° Ð¼Ð°ÑÑÐ¸Ð²Ð°" << MinValueIn(arr, n) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼Ð½Ñ‚Ð° Ð¼Ð°ÑÑÐ¸Ð²Ð°" << MaxValueIn(arr, n) << endl;
 } 
  
 
@@ -33,7 +33,7 @@ void FillRand(int arr[], const int n)
 	{
 
 		arr[i] = rand()%100;
-		//ôóíêöèÿ ðàíä âîçâðàùàåò ñëó÷ ÷èñëî îò 0 äî 32767
+		//Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ñ€Ð°Ð½Ð´ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÐ»ÑƒÑ‡ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 0 Ð´Ð¾ 32767
 	}
 }
 void Print(int arr[], const int n)
