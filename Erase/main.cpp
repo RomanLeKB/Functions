@@ -17,9 +17,9 @@ short Print(short arr[], const int n);
 
 void PrintReverse(int arr[], int const n);
 void PrintReverse(double arr[], int const n);
-float PrintReverse(float arr[], int const n);
-char PrintReverse(char arr[], int const n);
-short PrintReverse(short arr[], int const n);
+//float PrintReverse(float arr[], int const n);
+//char PrintReverse(char arr[], int const n);
+//short PrintReverse(short arr[], int const n);
 
 int Sum(int arr[], const int n);
 double Sum(double arr[], const int n);
@@ -88,7 +88,7 @@ void FillRand(double arr[], const int n)
 		//функция ранд возвращает случ число от 0 до 32767
 	}
 }
-float FillRand(float arr[], const int n)
+/* float FillRand(float arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -115,7 +115,7 @@ short FillRand(short arr[], const int n)
 		//функция ранд возвращает случ число от 0 до 32767
 	}
 }
-
+*/
 void Print(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -132,7 +132,7 @@ void Print(double arr[], const int n)
 	}
 	cout << endl;
 }
-float Print(float arr[], const int n)
+/*float Print(float arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -140,7 +140,8 @@ float Print(float arr[], const int n)
 	}
 	cout << endl;
 }
-char Print(char arr[], const int n)
+*/
+/*char Print(char arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -156,7 +157,7 @@ short Print(short arr[], const int n)
 	}
 	cout << endl;
 }
-
+*/
 void PrintReverse(int arr[], int const n)
 {
 	for (int i = n-1; i >= 0; i--)
@@ -173,7 +174,7 @@ void PrintReverse(double arr[], int const n)
 	}
 	cout << endl;
 }
-float PrintReverse(float arr[], int const n)
+/*float PrintReverse(float arr[], int const n)
 {
 	for (int i = n-1; i >= 0; i--)
 	{
@@ -181,7 +182,8 @@ float PrintReverse(float arr[], int const n)
 	}
 	cout << endl;
 } 
-char PrintReverse(char arr[], int const n)
+*/
+/*char PrintReverse(char arr[], int const n)
 {
 	for (int i = n-1; i >= 0; i--)
 	{
@@ -197,7 +199,7 @@ short PrintReverse(short arr[], int const n)
 	}
 	cout << endl;
 } 
-
+*/
 int Sum(int arr[], const int n)
 {
 
@@ -223,7 +225,7 @@ double Sum(double arr[], const int n)
 float Sum(float arr[], const int n)
 {
 
-	double sum = 0;
+	float sum = 0;
 	for (int i = 0; i < n; i++)
 	{
 		sum += arr[i];
@@ -234,7 +236,7 @@ float Sum(float arr[], const int n)
 char Sum(char arr[], const int n)
 {
 
-	double sum = 0;
+	char sum = 0;
 	for (int i = 0; i < n; i++)
 	{
 		sum += arr[i];
@@ -245,7 +247,7 @@ char Sum(char arr[], const int n)
 short Sum(short arr[], const int n)
 {
 
-	double sum = 0;
+	short sum = 0;
 	for (int i = 0; i < n; i++)
 	{
 		sum += arr[i];
@@ -264,15 +266,15 @@ double Avg(double arr[], const int n)
 }
 float Avg(float arr[], const int n)
 {
-	return (double)Sum(arr, n) / n;
+	return (float)Sum(arr, n) / n;
 }
 char Avg(char arr[], const int n)
 {
-	return (double)Sum(arr, n) / n;
+	return (char)Sum(arr, n) / n;
 }
 short Avg(short arr[], const int n)
 {
-	return (double)Sum(arr, n) / n;
+	return (short)Sum(arr, n) / n;
 }
 
 int MinValueIn(int arr[], const int n)
@@ -286,7 +288,7 @@ int MinValueIn(int arr[], const int n)
 }
 double MinValueIn(double arr[], const int n)
 {
-	int min = arr[0];
+	double min = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] < min)min = arr[i];
@@ -295,7 +297,7 @@ double MinValueIn(double arr[], const int n)
 }
 float MinValueIn(float arr[], const int n)
 {
-	int min = arr[0];
+	float min = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] < min)min = arr[i];
@@ -304,7 +306,7 @@ float MinValueIn(float arr[], const int n)
 }
 char MinValueIn(char arr[], const int n)
 {
-	int min = arr[0];
+	char min = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] < min)min = arr[i];
@@ -333,7 +335,7 @@ int MaxValueIn(int arr[], const int n)
 }
 double MaxValueIn(double arr[], const int n)
 {
-	int max = arr[0];
+	double max = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] > max)max = arr[i];
@@ -342,7 +344,7 @@ double MaxValueIn(double arr[], const int n)
 }
 float MaxValueIn(float arr[], const int n)
 {
-	int max = arr[0];
+	float max = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] > max)max = arr[i];
@@ -351,7 +353,7 @@ float MaxValueIn(float arr[], const int n)
 }
 char MaxValueIn(char arr[], const int n)
 {
-	int max = arr[0];
+	char max = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] > max)max = arr[i];
@@ -360,7 +362,7 @@ char MaxValueIn(char arr[], const int n)
 }
 short MaxValueIn(short arr[], const int n)
 {
-	int max = arr[0];
+	short max = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] > max)max = arr[i];
