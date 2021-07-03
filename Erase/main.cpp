@@ -19,7 +19,7 @@ HomeWork:
 
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
-float FillRand(float arr[], const int n);
+
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void PrintReverse(int arr[], const int n);
@@ -52,12 +52,7 @@ void main()
 	cout << "Среднее арифмитическое: " << Avg(d_arr, n) << endl;
 	//Function overloading
 
-	float f_arr[n]; //float
-	FillRand(f_arr, n);
-	Print(f_arr, n);
-	PrintReverse(f_arr, n);
-	cout << "Сумма элементов массива: " << Sum(f_arr, n) << endl;
-	cout << "Среднее арифмитическое: " << Avg(f_arr, n) << endl;
+	
 }
 
 void FillRand(int arr[], const int n)
@@ -75,13 +70,7 @@ void FillRand(double arr[], const int n)
 		arr[i] = double(rand() % 100) / 10;
 	}
 }
-float FillRand(float arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = double(rand() % 100) / 10;
-	}
-}
+
 
 void Print(int arr[], const int n)
 {
@@ -99,14 +88,7 @@ void Print(double arr[], const int n)
 	}
 	cout << endl;
 }
-void Print(float arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << tab;
-	}
-	cout << endl;
-}
+
 
 void PrintReverse(int arr[], const int n)
 {
@@ -142,15 +124,7 @@ int  Sum(int arr[], const int n)
 	}
 	return sum;
 }
-float Sum(float arr[], const int n)
-{
-	int sum = 0;
-	for (int i = 0; i < n; i++)
-	{
-		sum += arr[i];
-	}
-	return sum;
-}
+
 double  Sum(double arr[], const int n)
 {
 	double sum = 0;
@@ -169,11 +143,6 @@ double Avg(double arr[], const int n)
 {
 	return Sum(arr, n) / n;
 }
-float Avg(float arr[], const int n)
-{
-	return Sum(arr, n) / n;
-}
-
 int minValueIn(int arr[], const int n)
 {
 	int min = arr[0];
