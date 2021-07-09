@@ -20,22 +20,27 @@ HomeWork:
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(float arr[], const int n);
+void FillRand(short arr[], const int n);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void Print(float arr[], const int n);
+void Print(short arr[], const int n);
 
 void PrintReverse(int arr[], const int n);
 void PrintReverse(double arr[], const int n);
 void PrintReverse(float arr[], const int n);
+void PrintReverse(short arr[], const int n);
 
 int  Sum(int arr[], const int n);
 double  Sum(double arr[], const int n);
 float  Sum(float arr[], const int n);
+short  Sum(short arr[], const int n);
 
 double Avg(int arr[], const int n);
 double Avg(double arr[], const int n);
 float Avg(float arr[], const int n);
+short Avg(short arr[], const int n);
 
 int minValueIn(int arr[], const int n);
 int maxValueIn(int arr[], const int n);
@@ -58,17 +63,25 @@ void main()
 	Print(d_arr, n);
 	PrintReverse(d_arr, n);
 
-	cout << "Сумма элементов массива: " << Sum(d_arr, n) << endl;
-	cout << "Среднее арифмитическое: " << Avg(d_arr, n) << endl;
+	cout << "Сумма элементов массива Double: " << Sum(d_arr, n) << endl;
+	cout << "Среднее арифмитическое Double: " << Avg(d_arr, n) << endl;
 	//Function overloading
 	
 	float f_arr[n];	//float array
 	FillRand(f_arr, n);
 	Print(f_arr, n);
 	PrintReverse(f_arr, n);
-
 	cout << "Сумма элементов массива(float): " << Sum(f_arr, n) << endl;
 	cout << "Среднее арифмитическое(float): " << Avg(f_arr, n) << endl;
+	
+	short s_arr[n];	//short array
+	FillRand(s_arr, n);
+	Print(s_arr, n);
+	PrintReverse(s_arr, n);
+	cout << "Сумма элементов массива(short): " << Sum(s_arr, n) << endl;
+	cout << "Среднее арифмитическое(short): " << Avg(s_arr, n) << endl;
+
+	
 
 	
 }
@@ -93,6 +106,13 @@ void FillRand(float arr[], const int n)
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = float(rand() % 100) / 10;
+	}
+}
+void FillRand(short arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = short(rand() % 100) / 10;
 	}
 }
 
@@ -121,6 +141,14 @@ void Print(float arr[], const int n)
 	}
 	cout << endl;
 }
+void Print(short arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << tab;
+	}
+	cout << endl;
+}
 
 
 void PrintReverse(int arr[], const int n)
@@ -140,6 +168,14 @@ void PrintReverse(double arr[], const int n)
 	cout << endl;
 }
 void PrintReverse(float arr[], const int n)
+{
+	for (int i = n - 1; i >= 0; i--)
+	{
+		cout << arr[i] << tab;
+	}
+	cout << endl;
+}
+void PrintReverse(short arr[], const int n)
 {
 	for (int i = n - 1; i >= 0; i--)
 	{
@@ -175,6 +211,15 @@ float Sum(float arr[], const int n)
 	}
 	return sum;
 }
+short Sum(short arr[], const int n)
+{
+	short sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
  
 double Avg(int arr[], const int n)
 {
@@ -185,6 +230,10 @@ double Avg(double arr[], const int n)
 	return Sum(arr, n) / n;
 }
 float Avg(float arr[], const int n)
+{
+	return Sum(arr, n) / n;
+}
+short Avg(short arr[], const int n)
 {
 	return Sum(arr, n) / n;
 }
