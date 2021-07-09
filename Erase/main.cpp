@@ -21,11 +21,13 @@ void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(float arr[], const int n);
 void FillRand(short arr[], const int n);
+void FillRand(char arr[], const int n);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void Print(float arr[], const int n);
 void Print(short arr[], const int n);
+void Print(char arr[], const int n);
 
 void PrintReverse(int arr[], const int n);
 void PrintReverse(double arr[], const int n);
@@ -81,7 +83,9 @@ void main()
 	cout << "Сумма элементов массива(short): " << Sum(s_arr, n) << endl;
 	cout << "Среднее арифмитическое(short): " << Avg(s_arr, n) << endl;
 
-	
+	char c_arr[n];
+    FillRand(c_arr, n);
+	Print(c_arr, n);
 
 	
 }
@@ -115,6 +119,13 @@ void FillRand(short arr[], const int n)
 		arr[i] = short(rand() % 100) / 10;
 	}
 }
+void FillRand(char arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = char(rand);
+	}
+}
 
 
 void Print(int arr[], const int n)
@@ -142,6 +153,14 @@ void Print(float arr[], const int n)
 	cout << endl;
 }
 void Print(short arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << tab;
+	}
+	cout << endl;
+}
+void Print(char arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
